@@ -1,0 +1,299 @@
+@import 'https://fonts.googleapis.com/css?family=Rubik:300,500';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    box-sizing: border-box;
+    font-smoothing: antialiased;
+    font-feature-settings: "kern", "liga", "pnum" "ss01";
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 300;
+    line-height: 1.75;
+    padding: 8rem 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.fade {
+  position: absolute;
+  z-index: 50;
+  top: 20rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #FFFFFF;
+  animation: fadeOut 1s forwards .25s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.preamble {
+  font-size: 1.25em;
+}
+
+.container {
+    max-width: 60rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+.hero {
+    padding-top: 4rem;
+}
+
+.logo {
+    margin: 0 auto;
+    display: block;
+    animation: fadeIn forwards 1s;
+}
+
+.hero-content {
+    position: relative;
+    padding: 8rem 0;
+}
+
+.hero-title {
+    font-size: 4.8rem;
+    letter-spacing: .125em;
+    line-height: 1.25;
+    position: relative;
+    z-index: 5;
+    color: #0076FF;
+    color: #000000;
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-overlay,
+.hero-rectangle {
+    position: absolute;
+    left: -4rem;
+    right: 6rem;
+    bottom: 2rem;
+    height: 18rem;
+    width: 30rem;
+    border-radius: .25rem;
+}
+
+.hero-overlay {
+    background: #FFFFFF;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+
+.hero-rectangle {
+    background: #FF8900;
+    z-index: 0;
+}
+
+.article {
+    margin-top: 12rem;
+}
+.article:before,
+.article:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.article-text {
+    float: left;
+    width: 100%;
+}
+
+.article-text p + p {
+    margin-top: 4rem;
+}
+
+
+.signup-content {
+    position: relative;
+}
+
+.signup-title {
+    font-size: 4.8rem;
+    letter-spacing: .125em;
+    line-height: 1.25;
+    position: relative;
+    z-index: 5;
+    color: #0076FF;
+    color: #000000;
+    max-width: 50rem;
+    text-align: center;
+    padding: 4rem 0;
+    margin: 0 auto;
+}
+
+.signup-overlay,
+.signup-rectangle {
+    position: absolute;
+    right: -4rem;
+    bottom: 0;
+    height: 12rem;
+    border-radius: .25rem;
+    width: 30rem;
+}
+
+.signup-overlay {
+    background: #FFFFFF;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+
+.signup-rectangle {
+    background: #FF8900;
+    z-index: 0;
+}
+
+.signup-form {
+    background: #0076FF;
+    border-radius: .25rem;
+    padding: 8rem 4rem;
+    overflow: hidden;
+    position: relative;
+    margin: 4rem -4rem 0;
+}
+
+.signup-form p {
+    margin-bottom: 4rem;
+    max-width: 34rem;
+    color: #FFFFFF;
+}
+
+.signup-input {
+    background: #FFFFFF;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 2.4rem;
+    font-weight: 300;
+    padding: 2rem;
+    max-width: 28rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: .25rem;
+}
+
+.signup-submit {
+    background: none;
+    color: #FFFFFF;
+    border: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .15em;
+    padding: 2rem;
+    outline: none;
+    transition: .25s;
+    width: 100%;
+    max-width: 28rem;
+    margin-top: 2rem;
+    display: block;
+}
+
+.signup-submit:hover {
+    cursor: pointer;
+}
+
+.signup-submit:active {
+    transform: scale(.95);
+}
+
+.signup-logo {
+    right: 4rem;
+    bottom: 4rem;
+    position: absolute;
+    width: 10rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 8rem;
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .article-text,
+  .article-image {
+      width: 100%;
+  }
+
+  .signup-input,
+  .signup-submit {
+      max-width: none;
+  }
+
+  .signup-logo {
+    width: 5rem;
+    left: 50%;
+    right: auto;
+    bottom: 6rem;
+    transform: translateX(-50%);
+  }
+
+  .hero-title {
+    padding-left: 0;
+    text-indent: 0;
+    text-align: left;
+  }
+
+  .signup-title {
+    text-align: right;
+  }
+
+  .signup-form {
+    padding-bottom: 20rem;
+  }
+
+}
