@@ -5,12 +5,13 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "http-server": "^0.9.0",
-    "nude-scss": "^1.0.0",
     "clean-css": "^3.4.20",
+    "font-awesome": "^4.7.0",
+    "http-server": "^0.9.0",
     "livereload": "^0.4.1",
     "node-sass": "^3.10.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "nude-scss": "^1.0.0"
   },
   "scripts": {
     "styles": "echo '=> styles' && node-sass -q public/styles.scss -o public && cleancss public/styles.css -o public/styles.min.css",

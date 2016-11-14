@@ -40,7 +40,7 @@
 }
 
 $spacing: 4rem;
-$whitespace: 6rem;
+$whitespace: 12rem;
 $gutter: $spacing;
 $border-radius: .5rem;
 
@@ -50,11 +50,19 @@ $gradient1: linear-gradient(135deg, #0048FF, rgba(#00ABFF, .75));
 
 $font-family: 'DIN Next LT Pro', sans-serif;
 
+$fa-font-path: 'fonts';
+@import '../node_modules/font-awesome/scss/font-awesome';
 @import '../node_modules/nude-scss/scss/nude';
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: 200;
   margin-bottom: 1rem;
+}
+
+html {
+  @include media($bp-sm) {
+    font-size: 50%;
+  }
 }
 
 p {
@@ -68,10 +76,19 @@ p {
   margin: 0 auto;
 }
 
+.is-text-right {
+  text-align: right;
+
+  @include media($bp-sm) {
+    text-align: left;
+  }
+
+}
+
 ////////////////////////////////////////////////////////////////////////////
 
 .logo {
-  margin: 2rem auto $whitespace;
+  margin: 2rem auto $whitespace / 2;
   display: block;
   width: 8rem;
 }
@@ -86,6 +103,12 @@ p {
   color: $white;
   border-radius: $border-radius;
   overflow: hidden;
+  display: flex;
+
+  @include media($bp-xs) {
+    padding: $spacing;
+  }
+
 }
 
 .hero__background {
@@ -106,14 +129,34 @@ p {
 
 .hero__phone {
   padding-right: $spacing;
+  width: 40%;
+
+  @include media($bp-sm) {
+    width: 50%;
+  }
+
+  @include media($bp-xs) {
+    display: none;
+  }
+
 }
 
 .hero__content {
   padding: $spacing 0 $spacing $spacing;
+
+  @include media($bp-sm) {
+    width: 50%;
+  }
+
+  @include media($bp-xs) {
+    width: auto;
+    padding: 0;
+  }
+
 }
 
 .hero__title {
-  font-size: 6rem;
+  font-size: 5.6rem;
 }
 
 .hero__tagline {
@@ -122,11 +165,15 @@ p {
 }
 
 .hero__buttons {
-  margin-top: $whitespace;
+  margin-top: $whitespace / 2;
 
   .button {
     font-size: 1.6rem;
     font-weight: 300;
+  }
+
+  @include media($bp-xs) {
+    display: none;
   }
 
 }
@@ -148,16 +195,33 @@ p {
 
 .section {
   margin: $whitespace 0;
+  padding: 0 2 * $spacing;
+
+  @include media($bp-xs) {
+    padding: 0;
+  }
+
+}
+
+.section__image {
+  margin: 0 auto;
+  height: 24rem;
 }
 
 .subtitle {
   color: $primary;
+  font-size: 2rem;
 }
 
 ////////////////////////////////////////////////////////////////////////////
 
 .splits {
   margin: $whitespace 0;
+
+  @include media($bp-xs) {
+    margin: $whitespace -#{$gutter/2};
+  }
+
 }
 
 .split {
@@ -215,6 +279,7 @@ p {
 
 .steps h2 {
   text-align: center;
+  margin-bottom: $whitespace / 2;
 }
 
 .step__number {
@@ -244,13 +309,44 @@ p {
 ////////////////////////////////////////////////////////////////////////////
 
 .contact {
-  max-width: 60rem;
+  max-width: 48rem;
   border-radius: $border-radius;
   background: $gradient1;
   padding: $spacing;
-  margin: $whitespace auto;
-  text-align: center;
+  margin: $whitespace auto 0;
   color: $white;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.contact address {
+
+  font-style: normal;
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    font-size: 1.6rem;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -258,5 +354,5 @@ p {
 .footer {
   text-align: center;
   opacity: .25;
-  margin: $whitespace 0;
+  margin: $whitespace 0 $whitespace/4;
 }
