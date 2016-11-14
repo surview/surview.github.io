@@ -1,0 +1,32 @@
+{
+  "name": "surview.gitlab.io",
+  "version": "1.0.0",
+  "description": "The site for Surview",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "nude-scss": "^1.0.0",
+    "clean-css": "^3.4.20",
+    "livereload": "^0.4.1",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "styles": "echo '=> styles' && node-sass -q public/styles.scss -o public && cleancss public/styles.css -o public/styles.min.css",
+    "styles:watch": "nodemon -q -e scss -x 'npm run styles'",
+    "watch": "http-server & livereload & npm run styles:watch",
+    "start": "npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/surview/surview.gitlab.io.git"
+  },
+  "author": "Filip Hallqvist <filiphallqvist@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/surview/surview.gitlab.io/issues"
+  },
+  "homepage": "https://gitlab.com/surview/surview.gitlab.io#README"
+}

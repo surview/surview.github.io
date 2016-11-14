@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: url('fonts/DINNextLTPro-UltraLight.eot');
+  src: url('fonts/DINNextLTPro-UltraLight.eot?#iefix') format('embedded-opentype'),
+  url('fonts/DINNextLTPro-UltraLight.woff') format('woff'),
+  url('fonts/DINNextLTPro-UltraLight.ttf') format('truetype'),
+  url('fonts/DINNextLTPro-UltraLight.svg#fonts/DINNextLTPro-UltraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: url('fonts/DINNextLTPro-Light.eot');
+  src: url('fonts/DINNextLTPro-Light.eot?#iefix') format('embedded-opentype'),
+  url('fonts/DINNextLTPro-Light.woff') format('woff'),
+  url('fonts/DINNextLTPro-Light.ttf') format('truetype'),
+  url('fonts/DINNextLTPro-Light.svg#fonts/DINNextLTPro-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: url('fonts/DINNextLTPro-Italic.eot');
+  src: url('fonts/DINNextLTPro-Italic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/DINNextLTPro-Italic.woff') format('woff'),
+  url('fonts/DINNextLTPro-Italic.ttf') format('truetype'),
+  url('fonts/DINNextLTPro-Italic.svg#fonts/DINNextLTPro-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: url('fonts/DINNextLTPro-Regular.eot');
+  src: url('fonts/DINNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/DINNextLTPro-Regular.woff') format('woff'),
+  url('fonts/DINNextLTPro-Regular.ttf') format('truetype'),
+  url('fonts/DINNextLTPro-Regular.svg#fonts/DINNextLTPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$spacing: 4rem;
+$whitespace: 6rem;
+$gutter: $spacing;
+$border-radius: .5rem;
+
+$blue: #0076FF;
+$primary: $blue;
+$gradient1: linear-gradient(135deg, #0048FF, rgba(#00ABFF, .75));
+
+$font-family: 'DIN Next LT Pro', sans-serif;
+
+@import '../node_modules/nude-scss/scss/nude';
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  padding: $spacing;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.logo {
+  margin: 2rem auto $whitespace;
+  display: block;
+  width: 8rem;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.hero {
+  background: no-repeat center url('img/dude_with_phone.jpg');
+  background-size: cover;
+  position: relative;
+  padding: 2 * $spacing;
+  color: $white;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $gradient1;
+  z-index: 0;
+}
+
+.hero__phone,
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__phone {
+  padding-right: $spacing;
+}
+
+.hero__content {
+  padding: $spacing 0 $spacing $spacing;
+}
+
+.hero__title {
+  font-size: 6rem;
+}
+
+.hero__tagline {
+  font-size: 2.4rem;
+  opacity: .75;
+}
+
+.hero__buttons {
+  margin-top: $whitespace;
+
+  .button {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+}
+
+.button.is-primary {
+  background: $white;
+  color: $blue;
+  height: 7rem;
+  line-height: 7rem;
+  margin-right: $gutter / 2;
+}
+
+.button.is-secondary {
+  background: rgba($white, .1);
+  margin-left: $gutter / 2;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.section {
+  margin: $whitespace 0;
+}
+
+.subtitle {
+  color: $primary;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.splits {
+  margin: $whitespace 0;
+}
+
+.split {
+  padding: 2 * $spacing 0;
+  text-align: center;
+}
+
+.split.is-first {
+  background: url('img/box_1.jpg') no-repeat center;
+  background-size: cover;
+  color: $white;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+
+  @include media($bp-xs) {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+}
+
+.split.is-second {
+  background: url('img/box_2.jpg') no-repeat center;
+  background-size: cover;
+  color: $blue;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  @include media($bp-xs) {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+}
+
+.split__number {
+  display: inline-block;
+  margin: 0 auto $spacing / 4;
+  font-size: 12rem;
+  font-weight: 200;
+
+  sup {
+    top: 0;
+    font-weight: 200;
+    font-size: 6rem;
+  }
+
+}
+
+.split__text {
+  display: block;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.steps h2 {
+  text-align: center;
+}
+
+.step__number {
+  display: inline-block;
+  position: relative;
+  font-size: 4rem;
+  color: $blue;
+  width: 6rem;
+  height: 6rem;
+  text-align: right;
+  line-height: 6rem;
+  vertical-align: top;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: $off-white;
+    top: 0;
+    left: 0;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: -1;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.contact {
+  max-width: 60rem;
+  border-radius: $border-radius;
+  background: $gradient1;
+  padding: $spacing;
+  margin: $whitespace auto;
+  text-align: center;
+  color: $white;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+.footer {
+  text-align: center;
+  opacity: .25;
+  margin: $whitespace 0;
+}
