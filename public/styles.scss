@@ -70,6 +70,10 @@ p {
   margin-bottom: 2rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   padding: $spacing;
   max-width: 120rem;
@@ -96,14 +100,14 @@ p {
 ////////////////////////////////////////////////////////////////////////////
 
 .hero {
-  background: no-repeat center url('img/dude_with_phone.jpg');
-  background-size: cover;
   position: relative;
-  padding: 2 * $spacing;
+  padding: 0 (4 * $spacing);
   color: $white;
-  border-radius: $border-radius;
-  overflow: hidden;
   display: flex;
+
+  @include media($bp-sm) {
+    padding: 0 (2 * $spacing);
+  }
 
   @include media($bp-xs) {
     padding: $spacing;
@@ -112,13 +116,21 @@ p {
 }
 
 .hero__background {
+  background: no-repeat center url('img/dude_with_phone.jpg');
+  background-size: cover;
+  border-radius: $border-radius;
   position: absolute;
-  top: 0;
+  top: $whitespace / 2;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: $gradient1;
+  bottom: $whitespace / 2;
   z-index: 0;
+
+  @include media($bp-xs) {
+    top: 0;
+    bottom: 0;
+  }
+
 }
 
 .hero__phone,
@@ -128,11 +140,11 @@ p {
 }
 
 .hero__phone {
-  padding-right: $spacing;
+
   width: 40%;
 
   @include media($bp-sm) {
-    width: 50%;
+    width: 40%;
   }
 
   @include media($bp-xs) {
@@ -142,10 +154,11 @@ p {
 }
 
 .hero__content {
-  padding: $spacing 0 $spacing $spacing;
+  padding: $whitespace 0;
+  padding-left: $spacing;
+  width: 60%;
 
   @include media($bp-sm) {
-    width: 50%;
   }
 
   @include media($bp-xs) {
@@ -157,6 +170,11 @@ p {
 
 .hero__title {
   font-size: 5.6rem;
+
+  @include media($bp-xs) {
+    font-size: 4rem;
+  }
+
 }
 
 .hero__tagline {
@@ -166,10 +184,15 @@ p {
 
 .hero__buttons {
   margin-top: $whitespace / 2;
+  display: flex;
+  align-items: center;
 
   .button {
     font-size: 1.6rem;
     font-weight: 300;
+    width: 50%;
+    padding: 0;
+    text-align: center;
   }
 
   @include media($bp-xs) {

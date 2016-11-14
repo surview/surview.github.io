@@ -3386,6 +3386,9 @@ p {
   font-weight: 300;
   margin-bottom: 2rem; }
 
+a {
+  text-decoration: none; }
+
 .wrapper {
   padding: 4rem;
   max-width: 120rem;
@@ -3403,26 +3406,31 @@ p {
   width: 8rem; }
 
 .hero {
-  background: no-repeat center url("img/dude_with_phone.jpg");
-  background-size: cover;
   position: relative;
-  padding: 8rem;
+  padding: 0 16rem;
   color: #ffffff;
-  border-radius: 0.5rem;
-  overflow: hidden;
   display: flex; }
+  @media only screen and (max-width: 991px) {
+    .hero {
+      padding: 0 8rem; } }
   @media only screen and (max-width: 767px) {
     .hero {
       padding: 4rem; } }
 
 .hero__background {
+  background: no-repeat center url("img/dude_with_phone.jpg");
+  background-size: cover;
+  border-radius: 0.5rem;
   position: absolute;
-  top: 0;
+  top: 6rem;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, #0048FF, rgba(0, 171, 255, 0.75));
+  bottom: 6rem;
   z-index: 0; }
+  @media only screen and (max-width: 767px) {
+    .hero__background {
+      top: 0;
+      bottom: 0; } }
 
 .hero__phone,
 .hero__content {
@@ -3430,20 +3438,18 @@ p {
   z-index: 2; }
 
 .hero__phone {
-  padding-right: 4rem;
   width: 40%; }
   @media only screen and (max-width: 991px) {
     .hero__phone {
-      width: 50%; } }
+      width: 40%; } }
   @media only screen and (max-width: 767px) {
     .hero__phone {
       display: none; } }
 
 .hero__content {
-  padding: 4rem 0 4rem 4rem; }
-  @media only screen and (max-width: 991px) {
-    .hero__content {
-      width: 50%; } }
+  padding: 12rem 0;
+  padding-left: 4rem;
+  width: 60%; }
   @media only screen and (max-width: 767px) {
     .hero__content {
       width: auto;
@@ -3451,16 +3457,24 @@ p {
 
 .hero__title {
   font-size: 5.6rem; }
+  @media only screen and (max-width: 767px) {
+    .hero__title {
+      font-size: 4rem; } }
 
 .hero__tagline {
   font-size: 2.4rem;
   opacity: .75; }
 
 .hero__buttons {
-  margin-top: 6rem; }
+  margin-top: 6rem;
+  display: flex;
+  align-items: center; }
   .hero__buttons .button {
     font-size: 1.6rem;
-    font-weight: 300; }
+    font-weight: 300;
+    width: 50%;
+    padding: 0;
+    text-align: center; }
   @media only screen and (max-width: 767px) {
     .hero__buttons {
       display: none; } }
