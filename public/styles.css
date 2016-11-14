@@ -3446,6 +3446,9 @@ a {
     .hero__phone {
       display: none; } }
 
+.phone {
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.1)); }
+
 .hero__content {
   padding: 12rem 0;
   padding-left: 4rem;

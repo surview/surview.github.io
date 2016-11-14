@@ -153,6 +153,10 @@ a {
 
 }
 
+.phone {
+  filter: drop-shadow( 0 0 20px rgba(black, .1) );
+}
+
 .hero__content {
   padding: $whitespace 0;
   padding-left: $spacing;
