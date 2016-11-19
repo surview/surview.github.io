@@ -3380,7 +3380,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (max-width: 991px) {
   html {
-    font-size: 50%; } }
+    font-size: 55%; } }
 
 p {
   font-weight: 300;
@@ -3492,6 +3492,49 @@ a {
 .button.is-secondary {
   background: rgba(255, 255, 255, 0.1);
   margin-left: 2rem; }
+
+.phone path,
+.phone rect {
+  fill: white;
+  stroke: #cccccc; }
+
+.messages {
+  position: absolute;
+  top: 7rem;
+  left: 1.8rem;
+  right: 2.0rem;
+  bottom: 7.5rem;
+  padding: 2rem 1rem; }
+
+.message {
+  margin-bottom: 1rem;
+  animation: messageIn .25s ease-out forwards; }
+
+.message__text {
+  border-radius: 1.5rem;
+  background: #eeeeee;
+  padding: .75rem 1rem;
+  line-height: 1.2;
+  color: #000000;
+  font-size: 1.2rem;
+  display: inline-block;
+  max-width: 80%;
+  margin: 0; }
+
+.message.is-me {
+  text-align: right; }
+  .message.is-me .message__text {
+    background: #0076FF;
+    color: #ffffff;
+    text-align: left; }
+
+@keyframes messageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .section {
   margin: 12rem 0;
