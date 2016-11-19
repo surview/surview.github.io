@@ -327,15 +327,14 @@
         "KY3198",
         "Alright, vi undersöker det. Vill du att vi ringer upp dig när vi vet mer?",
         "Det hade varit jättebra!",
-        "Okej, då fixar vi det. Har du några andra frågor?",
-        "Nej",
-        "Kanon! Tack för att du handlade hos oss!"
+        "Okej, vi fixar det. Tack för att du handlade hos oss!",
     ];
 
     function printMessage(messageIndex) {
 
         return function() {
 
+            var messagesDiv = document.getElementById('messages');
             var messageDiv = document.createElement('div');
             var messageP = document.createElement('p');
             var messageTextNode = document.createTextNode(messages[messageIndex]);
@@ -346,7 +345,8 @@
             messageDiv.className = messageIndex % 2 == 0 ? 'message' : 'message is-me';
             messageP.className = 'message__text';
 
-            document.getElementById('messages').appendChild(messageDiv);
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
         }
     }
