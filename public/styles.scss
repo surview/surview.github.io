@@ -78,6 +78,11 @@ a {
   padding: $spacing;
   max-width: 120rem;
   margin: 0 auto;
+
+  @include media($bp-xs) {
+    padding: $spacing/2;
+  }
+
 }
 
 .is-text-right {
@@ -110,7 +115,7 @@ a {
   }
 
   @include media($bp-xs) {
-    padding: $spacing;
+    padding: $spacing $spacing/2;
   }
 
 }
@@ -283,6 +288,7 @@ a {
 
   @include media($bp-xs) {
     padding: 0;
+    margin: $whitespace/2 0;
   }
 
 }
@@ -399,6 +405,11 @@ a {
   padding: $spacing;
   margin: $whitespace auto 0;
   color: $white;
+
+  @include media($bp-xs) {
+    padding: $spacing 0;
+  }
+
 }
 
 .contact h2 {
@@ -439,4 +450,9 @@ a {
   text-align: center;
   opacity: .25;
   margin: $whitespace 0 $whitespace/4;
+
+  @include media($bp-xs) {
+    margin: $whitespace/2 0;
+  }
+
 }

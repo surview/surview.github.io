@@ -3393,6 +3393,9 @@ a {
   padding: 4rem;
   max-width: 120rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 767px) {
+    .wrapper {
+      padding: 2rem; } }
 
 .is-text-right {
   text-align: right; }
@@ -3415,7 +3418,7 @@ a {
       padding: 0 8rem; } }
   @media only screen and (max-width: 767px) {
     .hero {
-      padding: 4rem; } }
+      padding: 4rem 2rem; } }
 
 .hero__background {
   background: no-repeat center url("img/dude_with_phone.jpg");
@@ -3542,7 +3545,8 @@ a {
   padding: 0 8rem; }
   @media only screen and (max-width: 767px) {
     .section {
-      padding: 0; } }
+      padding: 0;
+      margin: 6rem 0; } }
 
 .section__image {
   margin: 0 auto;
@@ -3629,6 +3633,9 @@ a {
   padding: 4rem;
   margin: 12rem auto 0;
   color: #ffffff; }
+  @media only screen and (max-width: 767px) {
+    .contact {
+      padding: 4rem 0; } }
 
 .contact h2 {
   text-align: center; }
@@ -3657,3 +3664,6 @@ a {
   text-align: center;
   opacity: .25;
   margin: 12rem 0 3rem; }
+  @media only screen and (max-width: 767px) {
+    .footer {
+      margin: 6rem 0; } }
