@@ -3389,6 +3389,9 @@ p {
 a {
   text-decoration: none; }
 
+.highlight {
+  color: #0076FF; }
+
 .wrapper {
   padding: 4rem;
   max-width: 120rem;
@@ -3468,7 +3471,7 @@ a {
       font-size: 4rem; } }
 
 .hero__tagline {
-  font-size: 2.4rem;
+  font-size: 2rem;
   opacity: .75; }
 
 .hero__buttons {
@@ -3499,7 +3502,8 @@ a {
 .phone path,
 .phone rect {
   fill: white;
-  stroke: #cccccc; }
+  stroke: #CCCCCC;
+  stroke-width: .5; }
 
 .messages {
   position: absolute;
@@ -3561,6 +3565,12 @@ a {
   @media only screen and (max-width: 767px) {
     .splits {
       margin: 12rem -2rem; } }
+
+.splits-text {
+  text-align: center;
+  opacity: .25;
+  font-size: 1rem;
+  margin-top: 4rem; }
 
 .split {
   padding: 8rem 0;
@@ -3627,7 +3637,7 @@ a {
     z-index: -1; }
 
 .contact {
-  max-width: 48rem;
+  max-width: 50rem;
   border-radius: 0.5rem;
   background: linear-gradient(135deg, #0048FF, rgba(0, 171, 255, 0.75));
   padding: 4rem;
