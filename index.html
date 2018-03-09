@@ -218,9 +218,9 @@
                 <ul class="fa-ul">
                     <li><i class="fa fa-li fa-envelope-o"></i> info@surview.se</li>
                     <li><i class="fa fa-li fa-map-marker"></i>
-                        <b>Vasa (Startup Camp & Encubation)</b><br>
-                        Vera Sandbergs Allé 8, 4 trp<br>
-                        411 33, Göteborg
+                        <b>Vasa (Startup Camp &amp; Encubation)</b><br>
+                        Vera Sandbergs Allé 8<br>
+                        411 33, Gothenburg
                     </li>
                 </ul>
             </div>
@@ -266,33 +266,13 @@
                     </ul>
                 </address>
             </div>
-            <div class="column is-six">
-                <address>
-                    <ul class="fa-ul">
-                        <li>
-                            <i class="fa fa-li fa-user-o"></i>
-                            <b>Johanna Sigvardsson</b><br>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-            <div class="column is-six">
-                <address>
-                    <ul class="fa-ul">
-                        <li>
-                            <i class="fa fa-li fa-user-o"></i>
-                            <b>Emil Lundgren</b><br>
-                        </li>
-                    </ul>
-                </address>
-            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
             <p class="copyright">
-                Copyright &copy; 2017 Surview. All rights reserved.
+                Copyright &copy; 2018 Surview. All rights reserved.
             </p>
         </div>
     </footer>
@@ -342,13 +322,13 @@
     function initMessages() {
 
         for(var i = 0; i < messages.length; i++) {
-            setTimeout(printMessage(i), 2500 * i + 1000 * Math.random());
+            setTimeout(printMessage(i), 1000 * i + 1000 * Math.random());
         }
     }
 
-    if(window.addEventListener){
+    if (window.addEventListener){
         window.addEventListener('load', initMessages)
-    } else{
+    } else {
         window.attachEvent('onload', initMessages)
     }
 

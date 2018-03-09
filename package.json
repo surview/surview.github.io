@@ -1,7 +1,8 @@
 {
-  "name": "surview.gitlab.io",
+  "name": "surview.github.io",
+  "private": "true",
   "version": "1.0.0",
-  "description": "The site for Surview",
+  "description": "",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -14,7 +15,7 @@
     "nude-scss": "^1.0.0"
   },
   "scripts": {
-    "styles": "echo '=> styles' && node-sass -q public/styles.scss -o public && cleancss public/styles.css -o public/styles.min.css",
+    "styles": "echo '=> styles' && node-sass -q styles.scss -o . && cleancss styles.css -o styles.min.css",
     "styles:watch": "nodemon -q -e scss -x 'npm run styles'",
     "watch": "http-server & livereload & npm run styles:watch",
     "start": "npm run watch",
